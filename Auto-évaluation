@@ -1,0 +1,27 @@
+Ce projet s'inscrit dans une démarche de supervision industrielle légère, visant à transformer des signaux physiques en indicateurs exploitables.
+
+    Objectifs détaillés :
+
+        -Maîtrise de la couche physique : Configurer un capteur LoRaWAN (température, humidité) en respectant les contraintes de basse consommation et de pénétration du signal.  
+
+        -Architecture de transport : Assurer le routage des paquets via une gateway vers le réseau The Things Network (TTN) en configurant correctement l'AppEUI et le DevEUI.  
+
+        -Data Pipeline : Déployer une stack TIG (Telegraf, InfluxDB, Grafana) pour l’ingestion, le stockage temporel et la visualisation dynamique des métriques.
+
+    Réussites techniques :
+
+        -Mise en place d'un décodage de payload efficace en JavaScript côté TTN pour transformer les octets bruts en valeurs numériques lisibles.
+
+        -Création de tableaux de bord Grafana incluant des seuils d'alerte visuels pour la surveillance des conditions environnementales.
+
+    Difficultés et solutions :
+
+        -Problématique du Duty Cycle : L'ajustement de la fréquence d'envoi pour ne pas saturer la bande de fréquence réglementaire tout en gardant une précision de mesure satisfaisante.
+
+        -Gestion des pertes de paquets : Mise en œuvre de mécanismes de vérification pour s'assurer de la continuité des données malgré les obstacles physiques.
+
+    AC Validés :
+
+        -AC32.02 : Déployer un réseau d’accès sans fil pour le réseau d’entreprise en intégrant les enjeux de la sécurité.  
+
+        -AC34.01ROM : Administrer/superviser les infrastructures et les services télécom.
